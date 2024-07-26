@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(180deg, #000000, #00FF00); /* Gradient from black to green */
     text-align: center;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #f3e5ab; /* Vanilla color */
+    color: black;
     padding: 20px;
 }
 
@@ -18,27 +18,86 @@ header h1 {
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 80vh;
+    justify-content: center;
+    min-height: calc(100vh - 60px); /* Adjust height to account for header and footer */
+    background: linear-gradient(180deg, #000000, #00FF00); /* Gradient from black to green */
+}
+
+.auth-container, #chat-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2, #chat-container h2 {
+    margin-top: 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f3e5ab; /* Vanilla color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d2c29d; /* Slightly darker vanilla color for hover effect */
+}
+
+footer {
+    background-color: #f3e5ab; /* Vanilla color */
+    color: black;
+    padding: 10px;
+    width: 100%;
+    position: relative; /* Remove fixed position */
+    bottom: 0;
+}
+
+#chat-log {
+    border: 1px solid #ccc;
+    height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+#chat-log div {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+#chat-input {
+    width: calc(100% - 120px);
+    display: inline-block;
+}
+
+#chat-container button {
+    width: 100px;
+    display: inline-block;
 }
 
 .stream-container {
-    width: 80%;
-    height: 80%;
-    max-width: 1280px;
-    max-height: 720px;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
     background-color: white;
     border: 2px solid black;
     border-radius: 10px;
     overflow: hidden;
-}
-
-footer {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-bottom: 20px;
 }
